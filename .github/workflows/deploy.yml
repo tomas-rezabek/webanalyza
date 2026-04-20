@@ -25,7 +25,7 @@ jobs:
 
           ssh -i ~/.ssh/deploy_key -p "${VPS_PORT:-22}" "$VPS_USER@$VPS_HOST" << 'EOF'
             set -e
-            cd ~/webanalyza.cz
+            cd ~/webanalyza.cz/public
             git pull origin main
 
             echo "Deploy finished"
